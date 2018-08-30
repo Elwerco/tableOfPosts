@@ -1,0 +1,99 @@
+html, body, div, span, object, iframe, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+ol { 
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+body, html, #root {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+/*    font-family: 'Dancing Script', sans-serif;*/
+/*    background: #FFFEFC;*/
+}
+body,h1 {
+  font-family: "Raleway", Arial, sans-serif;
+  background: white;
+  transform: scale(1.02);
+}
+
+h1 {
+  letter-spacing: 6px
+}
+
+.w3-row-padding img {
+  margin-bottom: -0.01em; 
+}
+
+.news .w3-container {
+  padding: 20px 20px;
+}
+
+.news {
+  padding: 30px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.news a {
+  text-decoration: none;
+}
+
+.article img {
+  max-height: 400px;
+  object-fit: cover;
+  object-position: 0 0;
+  filter: grayscale(75%);
+}
+
+.article:hover img {
+  cursor: pointer;
+  filter: unset;
+}
+
+.pagination {
+  margin-bottom: 125px;
+}
+
+.loading-spinner, .error {
+  margin: 80px 0;
+}
+
+.article__content {
+  margin-top: -3px;
+}
+
+.article__title {
+  margin-bottom: 8px;
+  font-size: 19px;
+}
+
+.error {
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/
