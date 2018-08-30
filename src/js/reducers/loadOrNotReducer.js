@@ -1,22 +1,19 @@
 const initialState = {
-	test: [],
 	status: []
 };
 
 export default (state = initialState, action) => {
 	switch (action.type) {
-		case 'ADD_DATA':
+		case 'LOAD_START':
 			return {
 				...state,
-				test: action.payload,
-				status: 'loading'
+				status: action.payload
 			};
 			  break;
-		case 'STOP_DATA':
+			case 'LOAD_STOP':
 			return {
 				...state,
-				test: action.payload,
-				status: 'stop'
+				status: action.payload
 			};
 			  break;
 		default: 
