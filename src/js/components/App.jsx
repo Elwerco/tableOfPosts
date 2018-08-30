@@ -26,14 +26,11 @@ class App extends Component {
       return(
         <div>
         	<button onClick={this.fun.bind(this)}>Click</button>
-			<table>
-			   <tbody key={1}>
-			       <tr>
-			           <td>sds</td>
-			       </tr>
+			<table className="table">
+			   <tbody>
 			  	   {this.props.cmp.test.map(a => (
-			  	   	 <tr>
-			           <td>{a.body}</td>
+			  	   	 <tr className="tr" key={a.id}>
+			           <td className="td" key={a.id}>{a.body}</td>
 			        </tr>
 			  	   	))}
 			   </tbody>
