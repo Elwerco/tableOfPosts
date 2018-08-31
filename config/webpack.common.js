@@ -1,8 +1,8 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-console.log(process.cwd());
+console.log(process.cwd())
 let config = {
   context: process.cwd(),
 
@@ -12,7 +12,7 @@ let config = {
 
   output: {
     filename: 'main.js',
-    path: path.join(__dirname, '../build'),
+    path: path.join(__dirname, '../build')
   },
 
   plugins: [
@@ -44,11 +44,11 @@ let config = {
       {
         test: /\.(woff(2)?|ttf|eot|jpg|svg|ico)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
-          'file-loader?name=[name].[ext]' 
+          'file-loader?name=[name].[ext]'
         ]
       }
     ]
   }
 }
 
-module.exports = config;
+module.exports = config

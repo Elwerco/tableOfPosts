@@ -1,9 +1,7 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux'
 
-import addReducer from './addReducer';
-import loadOrNotReducer from './loadOrNotReducer';
+import addReducer from './addReducer'
 
 export default combineReducers({
-  addReducer,
-  loadOrNotReducer
-});
+  addReducer
+})

@@ -1,8 +1,8 @@
-const webpack = require('webpack');
-const merge = require('webpack-merge');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
-const common = require('./webpack.common.js');
+const common = require('./webpack.common.js')
 
 module.exports = merge(common, {
   mode: 'production',
@@ -41,7 +41,7 @@ module.exports = merge(common, {
           minChunks: 2
         }
       }
-    },
+    }
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -49,5 +49,5 @@ module.exports = merge(common, {
         NODE_ENV: JSON.stringify('production')
       }
     })
-  ],
-});
+  ]
+})
