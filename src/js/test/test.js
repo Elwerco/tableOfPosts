@@ -1,30 +1,14 @@
-import React, { Component } from 'react'
-import jest from 'jest'
+import nock from 'nock'
 import axios from 'axios'
+import httpAdapter from 'axios/lib/adapters/http'
 
-class App extends Component {
-  constructor (props) {
-    super(props)
-    this.state = { user: {} }
-  }
+axios.defaults.adapter = httpAdapter
 
-  componentDidMount () {
-    test('zero', (p) => {
-      axios.get('https://jsonplaceholder.typicode.com/comments')
-	    .then(response => {
-	      console.log(response.data)
-	      this.setState({ user: response })
-	    })
-	    .catch(function (error) {
-	      console.log(error)
-	    })
-      expect(this.state).not.toBeUndefined()
-    }, 10000)
-  }
+describe('foo', () => {
+  it('bar', () => {
+    nock('https://jsonplaceholder.typicode.com')
+      .get('/comments')
+      .reply(200, 'some payload')
+  })
+})
 
-  render () {
-    return (
-      <div />
-    )
-  }
-}
