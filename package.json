@@ -9,7 +9,7 @@
     "build:dev": "webpack -p --progress --config=config/webpack.dev.js  --mode development",
     "lint": "eslint src/js || exit 0",
     "eject": "react-scripts eject",
-    "test": "set CI=true && react-scripts-ts test --mapCoverage --env=jsdom --coverage --setupTestFrameworkScriptFile"
+    "test": "jest --env=jsdom"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -76,26 +76,7 @@
     "webpack-merge": "^4.1.3"
   },
   "jest": {
-    "automock": true,
-    "collectCoverage": false,
-    "testRegex": ".*\\.spec\\.js$",
-    "setupTestFrameworkScriptFile": "<rootDir>/src/js/setupFile.js",
-    "preprocessorIgnorePatterns": [
-      "/node_modules/(?!@)/"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "jsx",
-      "json"
-    ],
-    "modulePathIgnorePatterns": [
-      "/.git/",
-      "/.idea/",
-      "/.vagrant/",
-      "/coverage/",
-      "/documentation/",
-      "/scripts/"
-    ]
+    "setupTestFrameworkScriptFile": "<rootDir>/src/js/test/setupTests.js"
   },
   "author": "montecamo",
   "license": "ISC",
