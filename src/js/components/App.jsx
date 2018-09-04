@@ -1,8 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import axios from 'axios'
 import store from '../store'
 import PropTypes from 'prop-types'
+
+import Table from './Table.jsx'
+
 /**
   * Главный и единственный компонент
   * @constructor
@@ -27,19 +30,11 @@ class App extends Component {
 
   render () {
     return (
-      <div>
+      <React.Fragment>
         <button onClick={this.pageStatus.bind(this)}>Click</button>
-        <table className='table'>
-          <tbody>
-            {this.props.cmp.test.map(a => (
-              <tr className='tr' key={a.id}>
-                <td className='td' key={a.id}>{a.body}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <Table />
         <img id='spiner' src='spiner.gif' />
-      </div>
+      </React.Fragment>
     )
   }
 }

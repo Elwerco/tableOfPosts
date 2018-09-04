@@ -1,14 +1,9 @@
-import nock from 'nock'
-import axios from 'axios'
-import httpAdapter from 'axios/lib/adapters/http'
+import React from 'react'
+import { shallow } from 'enzyme'
+import Table from '../components/Table.jsx'
+import Adapter from 'enzyme-adapter-react-16'
 
-axios.defaults.adapter = httpAdapter
-
-describe('foo', () => {
-  it('bar', () => {
-    nock('https://jsonplaceholder.typicode.com')
-      .get('/comments')
-      .reply(200, 'some payload')
-  })
+it('renders an editor area', () => {
+  const editor = shallow(<Table />)
+  expect(editor.find('table')).toBeTruthy()﻿
 })
-
